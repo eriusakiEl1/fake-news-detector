@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="titulo">🕵️ Detector de Fake News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 data-i18n="titulo">🕵️ Detector de Fake News</h1>
+
+    <form id="formulario">
+      <input type="url" id="url" placeholder="https://ejemplo.com/noticia..." required>
+      <button type="submit" data-i18n="analizar">Analizar</button>
+    </form>
+
+    <!-- Indicador de carga -->
+    <div id="cargando" class="oculto" style="text-align:center; margin-top:20px;">
+      <span style="font-size:24px;">🔄 Analizando noticia...</span>
+    </div>
+
+    <!-- Resultados -->
+    <div id="resultado" class="oculto">
+      <h2 data-i18n="resultado">Resultado del Análisis:</h2>
+      <p><strong data-i18n="veredicto">Veredicto:</strong> <span id="veredicto"></span></p>
+      <p><strong data-i18n="puntuacion">Puntuación:</strong> <span id="puntuacion"></span></p>
+      <p><strong data-i18n="palabras">Palabras clave:</strong> <span id="palabrasClave"></span></p>
+      <p><strong data-i18n="resumen">Resumen del texto:</strong></p>
+      <p id="resumen"></p>
+      <div id="relacionadas"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
